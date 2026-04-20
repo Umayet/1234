@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite Stay Hostel</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+    url('https://images.unsplash.com/photo-1566073771259-6a8506099945');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    animation:fadeIn 2s ease;
+}
+
+.hero h1{
+    font-size:3rem;
+    animation:slideUp 1.5s ease;
+}
+
+.hero p{
+    margin-top:10px;
+    font-size:1.2rem;
+    opacity:0.8;
+}
+
+.btn{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    background:#22c55e;
+    color:white;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#16a34a;
+    transform:scale(1.1);
+}
+
+/* ROOMS */
+.rooms{
+    padding:50px 20px;
+    text-align:center;
+}
+
+.rooms h2{
+    margin-bottom:30px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:10px;
+}
+
+.card p{
+    padding:0 10px 10px;
+    opacity:0.8;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@keyframes slideUp{
+    from{transform:translateY(50px); opacity:0;}
+    to{transform:translateY(0); opacity:1;}
+}
+</style>
+
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>Elite Stay Hostel</h1>
+        <p>Comfort • Luxury • Affordable</p>
+        <button class="btn" onclick="bookGeneral()">Book Now</button>
+    </div>
+</section>
+
+<!-- ROOMS -->
+<section class="rooms">
+    <h2>Our Rooms</h2>
+
+    <div class="grid">
+
+        <!-- SINGLE -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304">
+            <h3>Single Room</h3>
+            <p>Perfect for solo guests</p>
+            <button class="btn" onclick="bookSingle()">Book</button>
+        </div>
+
+        <!-- DELUXE -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
+            <h3>Deluxe Room</h3>
+            <p>More space & comfort</p>
+            <button class="btn" onclick="bookDeluxe()">Book</button>
+        </div>
+
+        <!-- SUITE -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+            <h3>Luxury Suite</h3>
+            <p>Top-tier experience</p>
+            <button class="btn" onclick="bookSuite()">Book</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>📍 Abuja | 📞 +234 801 234 5678</p>
+</footer>
+
+<script>
+function bookGeneral(){
+    window.open("https://wa.me/2348012345678?text=Hello%20I%20want%20to%20make%20an%20enquiry", "_blank");
+}
+
+function bookSingle(){
+    window.open("https://wa.me/2348012345678?text=Single", "_blank");
+}
+
+function bookDeluxe(){
+    window.open("https://wa.me/2348012345678?text=Deluxe", "_blank");
+}
+
+function bookSuite(){
+    window.open("https://wa.me/2348012345678?text=Suite", "_blank");
+}
+</script>
+
+</body>
+</html>
